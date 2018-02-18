@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.udacity.sandwichclub.DetailActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/activity_vertical_margin">
+
+        <ImageView
+            android:id="@+id/image_iv"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/sandwich_picture_content_description"
+            android:scaleType="centerCrop"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="16dp" />
+
+
+        <!-- Also known info -->
+        <TextView
+            android:id="@+id/also_known_tv_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:text="@string/detail_also_known_as_label"
+            android:textSize="@dimen/detail_title_text_size"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="@+id/image_iv"
+            app:layout_constraintTop_toBottomOf="@+id/image_iv" />
+
+        <TextView
+            android:id="@+id/also_known_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/detail_explain_text_size"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            app:layout_constraintEnd_toEndOf="@+id/image_iv"
+            app:layout_constraintLeft_toRightOf="@+id/also_known_tv_label"
+            app:layout_constraintTop_toTopOf="@+id/also_known_tv_label"
+            tools:text="'Also Known As' Test Text" />
+        <!-- Also known info -->
+
+
+        <!-- Origin info -->
+        <TextView
+            android:id="@+id/origin_tv_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/detail_title_text_size"
+            android:layout_marginBottom="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:text="@string/detail_place_of_origin_label"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="@+id/image_iv"
+            app:layout_constraintTop_toBottomOf="@+id/also_known_tv" />
+
+        <TextView
+            android:id="@+id/origin_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/detail_explain_text_size"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            app:layout_constraintEnd_toEndOf="@+id/image_iv"
+            app:layout_constraintLeft_toRightOf="@+id/origin_tv_label"
+            app:layout_constraintTop_toTopOf="@+id/origin_tv_label"
+            tools:text="'Place of Origin ' Test Text" />
+        <!-- Origin info -->
+
+
+        <!-- Ingredients info -->
+        <TextView
+            android:id="@+id/ingredients_tv_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/detail_title_text_size"
+            android:layout_marginBottom="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:text="@string/detail_ingredients_label"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="@+id/image_iv"
+            app:layout_constraintTop_toBottomOf="@+id/origin_tv" />
+
+        <TextView
+            android:id="@+id/ingredients_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/detail_explain_text_size"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            app:layout_constraintEnd_toEndOf="@+id/image_iv"
+            app:layout_constraintLeft_toRightOf="@+id/ingredients_tv_label"
+            app:layout_constraintTop_toTopOf="@+id/ingredients_tv_label"
+            tools:text="'Ingredients' Test Text" />
+        <!-- Ingredients info -->
+
+
+        <!-- Description info -->
+        <TextView
+            android:id="@+id/description_tv_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/detail_title_text_size"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:text="@string/detail_description_label"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="@+id/image_iv"
+            app:layout_constraintTop_toBottomOf="@+id/ingredients_tv" />
+
+        <TextView
+            android:id="@+id/description_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/detail_explain_text_size"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            app:layout_constraintEnd_toEndOf="@+id/image_iv"
+            app:layout_constraintLeft_toRightOf="@+id/description_tv_label"
+            app:layout_constraintTop_toTopOf="@+id/description_tv_label"
+            tools:text="'Description' Test Text" />
+        <!-- Description info -->
+
+    </android.support.constraint.ConstraintLayout>
+
+</ScrollView>
